@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+### Bộ code base để bắt đầu học khóa MERN Stack Pro (HỌC PHẦN FRONT-END: REACTJS - MATERIAL UI - REDUX...vv) - Lập Trình qua dự án thực tế Trello Clone trên YouTube của mình nhé các bạn!
+### Base project for my MERN Stack Pro Course - Build Trello App on YouTube!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Playlist hướng dẫn chi tiết từ A-Z: https://www.youtube.com/playlist?list=PLP6tw4Zpj-RJP2-YrhtkWqObMQ-AA4TDy
 
-## Available Scripts
+- Link Download Full Source Code hoàn chỉnh của bộ này và ủng hộ mình (Vui lòng đọc phần mô tả ở bất kỳ video nào trong Playlist MERN Stack để hiểu tại sao có 2 link bên dưới)
 
-In the project directory, you can run:
+- 🤝 Get Full Source Code for this Course here and support me 🍀
 
-### `npm start`
+- 🎁 on Ko-fi: https://ko-fi.com/s/e41c325ca4
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎁 on Buy Me a Coffee: https://www.buymeacoffee.com/codetq/e/191152
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Hướng dẫn clone Repo code này về máy các bạn chuẩn nhất ở đây nhé:
 
-### `npm test`
+- Link: https://youtu.be/lUfsTj45Uys
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Requirements - Thông tin của bộ Code Base này - Chuẩn các phiên bản dưới đây để bắt đầu học: (Semantic Versioning)
 
-### `npm run build`
+```
+* nodejs = v18.16.0
+* npm = v9.5.1
+* yarn = v1.22.19
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* "react": "^18.2.0"
+* "react-dom": "^18.2.0"
+* "@types/react": "^18.0.28"
+* "@types/react-dom": "^18.0.11"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* "vite": "^4.3.2"
+* "@vitejs/plugin-react-swc": "^3.0.0"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* "eslint": "^8.38.0"
+* "eslint-plugin-react": "^7.32.2"
+* "eslint-plugin-react-hooks": "^4.6.0"
+* "eslint-plugin-react-refresh": "^0.3.4"
+```
 
-### `npm run eject`
+### About Me - Thông tin về mình:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Author: **Trungquandev - Một Lập Trình Viên** & **CodeTQ**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Blog: https://trungquandev.com/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+CV: https://cv.trungquandev.com/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+YouTube 01 (Trungquandev - Một Lập Trình Viên): https://www.youtube.com/@trungquandev
 
-## Learn More
+YouTube 02 (CodeTQ): https://www.youtube.com/@code-tq
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+"Learning new everyday not the copycat of yesterday!"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+"A bit of fragrance clings to the hand that gives flowers!"
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for watching!
