@@ -16,13 +16,13 @@ function ModeSelect() {
   }
 
   return (
-    <FormControl size="small">
-      <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
+    <FormControl size='small' sx={{ minWidth: 120 }}>
+      <InputLabel id='label-select-dark-light-mode'>Mode</InputLabel>
       <Select
-        labelId="label-select-dark-light-mode"
-        id="select-dark-light-mode"
+        labelId='label-select-dark-light-mode'
+        id='select-dark-light-mode'
         value={mode}
-        label="Mode"
+        label='Mode'
         onChange={handleChange}
       >
         <MenuItem value='light'>
