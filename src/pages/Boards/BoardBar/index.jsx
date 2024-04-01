@@ -86,13 +86,16 @@ function BoardBar() {
         <AvatarGroup
           max={7}
           sx={{
-            // gap: '10px', [mode:off] - anhQuân có, còn mình k có =)))
+            gap: '10px', //[mode:off] - anhQuân có, còn mình k có =)))
             '& .MuiAvatar-root': {
               width: 34,
               height: 34,
               fontSize: 16,
-              // border: 'none',
-              borderWidth: '1.5px' //[mode:tự thêm =))]
+              border: 'none', //[1]
+              // borderWidth: '1.5px', //[mode:tự thêm =))]
+              color: 'white',
+              cursor: 'pointer',
+              '&:first-of-type': { bgcolor: '#a4b0be' }
             }
           }}
         >
