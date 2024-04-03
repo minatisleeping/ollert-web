@@ -9,6 +9,7 @@ import Avatar from '@mui/material/Avatar'
 import AvatarGroup from '@mui/material/AvatarGroup'
 import { Tooltip, Button } from '@mui/material'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
+import { capitalizeFirstLetter } from '~/utils/formatters'
 
 const MENU_STYLE = {
   color: 'white',
@@ -24,7 +25,9 @@ const MENU_STYLE = {
   }
 }
 
-function BoardBar() {
+function BoardBar({ board }) {
+  // const { board } = props
+
   return (
     <Box sx={{ //Board Bar
       width: '100%',
@@ -41,20 +44,21 @@ function BoardBar() {
         <Chip
           sx={MENU_STYLE}
           icon={<DashboardIcon />}
-          label='minatisleeping MERN Stack Board'
+          label={board.title}
           clickable //onClick={() => {}}: cách này cũng được, thấy cũng hay =)))
         />
         <Chip
           sx={MENU_STYLE}
           icon={<SecurityIcon />}
-          label='Public/Private Workspaces'
-          clickable //onClick={() => {}}: cách này cũng được, thấy cũng hay =)))
+          // label={board?.type === 'public' ? 'Public' : 'Private'} - cái này trick lỏ =)))
+          label={capitalizeFirstLetter(board?.type)}
+          clickable
         />
         <Chip
           sx={MENU_STYLE}
           icon={<AddToDriveIcon />}
           label='Add To Google Drive'
-          clickable //onClick={() => {}}: cách này cũng được, thấy cũng hay =)))
+          clickable
         />
         <Chip
           sx={MENU_STYLE}
