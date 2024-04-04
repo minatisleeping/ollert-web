@@ -17,12 +17,15 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import Tooltip from '@mui/material/Tooltip'
 import Button from '@mui/material/Button'
 import ListCards from './ListCards/ListCards'
+import { mapOrder } from '~/utils/sort'
 
 function Column({ column }) {
   const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
   const handleClick = (event) => setAnchorEl(event.currentTarget)
   const handleClose = () => setAnchorEl(null)
+
+  const orderedCard = mapOrder(column?.cards, column?.cardOrderIds, '_id')
 
   return (
     <Box sx={{
@@ -103,7 +106,7 @@ function Column({ column }) {
       </Box>
 
       {/* List Cards */}
-      <ListCards cards={column?.cards}/>
+      <ListCards cards={orderedCard}/>
 
       {/* Box Column Footer */}
       <Box sx={{
