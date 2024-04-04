@@ -2,13 +2,31 @@ import Box from '@mui/material/Box'
 import ListColumns from './ListColumns/ListColumns'
 import { mapOrder } from '~/utils/sort'
 
-import { DndContext } from '@dnd-kit/core'
+import {
+  DndContext,
+  // PointerSensor,
+  MouseSensor,
+  TouchSensor,
+  useSensor,
+  useSensors
+} from '@dnd-kit/core'
 import { arrayMove } from '@dnd-kit/sortable'
 import { useEffect, useState } from 'react'
 
 function BoardContent({ board }) {
+  // pointer sensor cũng ngon nhưng còn vài case chưa thật sự ổn nên mình chuyển qua dùng mouse sensor
+  //const pointerSensor = useSensor(PointerSensor, { activationConstraint: { distance: 10 } }) // >= 10px thì mới tính là kéo
 
-  // const orderedColumns = mapOrder(board?.columns, board?.columnOrderIds, '_id')
+  // Yêu cầu chuột di chuyển 10px thì mới kích hoạt event, fix trường hợp click thì gọi event
+  const mouseSensor = useSensor(MouseSensor, { activationConstraint: { distance: 10 } })
+
+  // Nhấn giữ 250ms va2 dung sai của cảm ứng 500px thì mới kích hoạt event
+  const touchSensor = useSensor(TouchSensor, { activationConstraint: { delay: 250, tolerance: 500 } })
+
+  // Ưu tiên sử dụng kết hợp cả 2 sensor để tăng trải nghiệm cho người dùng(speialy in mobile device)
+  // const sensors = useSensors(pointerSensor) // k dùng pointer sensor nữa
+  const sensors = useSensors(mouseSensor, touchSensor)
+
   const [orderedColumns, setOrderedColumns] = useState([])
 
   useEffect(() => {
@@ -16,7 +34,7 @@ function BoardContent({ board }) {
   }, [board])
 
   const handleDragEnd = (event) => {
-    console.log('🚀 ~ handleDragEnd: ', event)
+    // console.log('🚀 ~ handleDragEnd: ', event)
     const { active, over } = event // active: là thằng đang kéo, over: là thằng bị kéo
 
     // Nếu k tồn tại over (kéo xàm l) thì return luôn tránh lỗi
@@ -42,7 +60,7 @@ function BoardContent({ board }) {
   }
 
   return (
-    <DndContext onDragEnd={handleDragEnd}>
+    <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
       <Box sx={{ //Board Bar
         bgcolor: theme => theme.palette.mode === 'dark' ? '#34495e' : '#1976d2',
         width: '100%',
