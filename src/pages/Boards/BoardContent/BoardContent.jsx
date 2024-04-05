@@ -10,7 +10,8 @@ import {
   useSensor,
   useSensors,
   DragOverlay,
-  defaultDropAnimationSideEffects
+  defaultDropAnimationSideEffects,
+  closestCorners
 } from '@dnd-kit/core'
 import { arrayMove } from '@dnd-kit/sortable'
 import { useEffect, useState } from 'react'
@@ -127,7 +128,7 @@ function BoardContent({ board }) {
           nextOverColumn.cardOrderIds = nextOverColumn.cards.map(card => card._id)
         }
 
-        console.log('🚀 ~ handleDragOver ~ nextColumns:', nextColumns)
+        // console.log('🚀 ~ handleDragOver ~ nextColumns:', nextColumns)
         return nextColumns
       })
     }
@@ -178,6 +179,7 @@ function BoardContent({ board }) {
   return (
     <DndContext
       sensors={sensors}
+      collisionDetection={closestCorners}
       onDragStart={handleDragStart}
       onDragOver={handleDragOver}
       onDragEnd={handleDragEnd}
