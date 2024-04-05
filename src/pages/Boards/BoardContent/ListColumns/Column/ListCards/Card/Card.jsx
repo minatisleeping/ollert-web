@@ -24,7 +24,8 @@ function Card({ card }) {
     // Nếu sử dụng CSS.Transform như docs thì sẽ bị lỗi kiểu stretch
     transform: CSS.Translate.toString(transform),
     transition,
-    opacity: isDragging ? 0.5 : undefined
+    opacity: isDragging ? 0.5 : undefined,
+    border: isDragging ? '1px solid #0984e3' : undefined
   }
 
   const shouldShowCardAction = () => {
