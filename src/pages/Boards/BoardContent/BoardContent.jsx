@@ -179,6 +179,8 @@ function BoardContent({ board }) {
   return (
     <DndContext
       sensors={sensors}
+      /* Thuật toán phát hiện va chạm (nếu không có nó thì Card với cover lớn sẽ không kéo qua Column được
+      vì lúc này nó đang bị conflict giữa Card và Column), chúng ta sẽ dùng closestCorners thay vì closestCenter */
       collisionDetection={closestCorners}
       onDragStart={handleDragStart}
       onDragOver={handleDragOver}
