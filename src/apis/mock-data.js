@@ -6,7 +6,7 @@ export const mockData = {
     type: 'public', // 'private'
     ownerIds: [], // Những users là Admin của board
     memberIds: [], // Những users là member bình thường của board
-    columnOrderIds: ['column-id-01', 'column-id-02', 'column-id-03'], // Thứ tự sắp xếp / vị trí của các Columns trong 1 boards
+    columnOrderIds: ['column-id-01', 'column-id-02', 'column-id-03', 'column-id-04'], // Thứ tự sắp xếp / vị trí của các Columns trong 1 boards
     columns: [
       {
         _id: 'column-id-01',
@@ -53,6 +53,27 @@ export const mockData = {
           { _id: 'card-id-11', boardId: 'board-id-01', columnId: 'column-id-03', title: 'Title of card 11', description: null, cover: null, memberIds: [], comments: [], attachments: [] },
           { _id: 'card-id-12', boardId: 'board-id-01', columnId: 'column-id-03', title: 'Title of card 12', description: null, cover: null, memberIds: [], comments: [], attachments: [] },
           { _id: 'card-id-13', boardId: 'board-id-01', columnId: 'column-id-03', title: 'Title of card 13', description: null, cover: null, memberIds: [], comments: [], attachments: [] }
+        ]
+      },
+      {
+        _id: 'column-id-04',
+        boardId: 'board-id-01',
+        title: 'Empty Column 04',
+        /*
+          Cách xử lí bug logic thư viện Dnd-kit khi Column là rỗng"
+          Phía FE sẽ tự tạo ra một cái Card đặc biệt: Placeholder Card, k liên quan tới BE
+          Card đặc biệt này sẽ d0c ẩn để Unique rất đơn giản, k cần phải làm random phức tạp:
+          'columnId-placeholder-card' (mỗi Column chỉ có thể có tối đa 1 cái Placeholder Card)
+          Quan trọng khi tạo: phải đầy đủ: (_id, boardId, columnId, FE_PlaceholderCard: true)
+        */
+        cardOrderIds: ['column-id-placeholder-card'],
+        cards: [
+          {
+            _id: 'column-id-placeholder-card',
+            boardId: 'board-id-01',
+            columnId: 'column-id-03',
+            FE_PlaceholderCard: true
+          }
         ]
       }
     ]
