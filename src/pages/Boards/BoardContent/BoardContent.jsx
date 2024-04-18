@@ -37,7 +37,8 @@ function BoardContent({
   createNewCard,
   moveColumns,
   moveCardInTheSameColumn,
-  moveCardToDifferentColumn
+  moveCardToDifferentColumn,
+  deleteColumnDetails
 }) {
   // pointer sensor cũng ngon nhưng còn vài case chưa thật sự ổn nên mình chuyển qua dùng mouse sensor
   //const pointerSensor = useSensor(PointerSensor, { activationConstraint: { distance: 10 } }) // >= 10px thì mới tính là kéo
@@ -369,6 +370,7 @@ function BoardContent({
           columns={orderedColumns}
           createNewColumn={createNewColumn}
           createNewCard={createNewCard}
+          deleteColumnDetails={deleteColumnDetails}
         />
         <DragOverlay dropAnimation={customDropAnimation}>
           {(!activeDragItemType) && null}
