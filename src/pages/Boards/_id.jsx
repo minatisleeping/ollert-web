@@ -27,7 +27,7 @@ function Board() {
 
   useEffect(() => {
     // Tạm thời fix cứng boardId: sau này mình sẽ sử dụng react-router-dom để lấy boardId từ URL về
-    const boardId = '6618f6feb6fd95766dbc765c'
+    const boardId = '6825e52acb241348dea31b19'
     // Call API
     fetchBoardDetailsAPI(boardId).then(board => {
 
