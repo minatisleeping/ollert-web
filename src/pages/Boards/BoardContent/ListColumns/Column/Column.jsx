@@ -81,13 +81,6 @@ function Column({ column, createNewCard, deleteColumnDetails }) {
       description: 'This action will permanently delete this Column and all Cards inside it. Are you sure?',
       confirmationText: 'Yes, delete it!',
       cancellationText: 'No, keep it'
-      // buttonOrder: ['confirm', 'cancel']
-      // allowClose: false,
-      // dialogProps: { maxWidth: 'xs' },
-      // cancellationButtonProps: { color: 'primary' },
-      // confirmationButtonProps: { color: 'error', variant: 'outlined' },
-      // description: 'Hãy chấp nhận sự thật rằng minatdeptrai để đươc xác nhận xoá Column này!',
-      // confirmationKeyword: 'minatdeptrai'
     }).then(() => {
       deleteColumnDetails(column._id)
     }).catch(() => {})

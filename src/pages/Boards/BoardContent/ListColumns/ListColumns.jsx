@@ -19,14 +19,12 @@ function ListColumns({ columns, createNewColumn, createNewCard, deleteColumnDeta
       return
     }
 
-    // Tạo dữ liệu Column để call API
     const newColumnData = {
       title: newColumnTitle
     }
     // Gọi API ở đây..
     createNewColumn(newColumnData)
 
-    // Đóng trạng thái thêm Column mới & clear input
     toggleOpenNewColumnForm()
     setNewColumnTitle('')
   }
