@@ -40,7 +40,7 @@ function BoardContent({
   moveCardToDifferentColumn,
   deleteColumnDetails
 }) {
-  // pointer sensor cũng ngon nhưng còn vài case chưa thật sự ổn nên mình chuyển qua dùng mouse sensor
+  // pointer sensor cũng ngon nhưng còn vài case chưa thật sự ổn nên  dùng mouse sensor
   //const pointerSensor = useSensor(PointerSensor, { activationConstraint: { distance: 10 } }) // >= 10px thì mới tính là kéo
 
   // Yêu cầu chuột di chuyển 10px thì mới kích hoạt event, fix trường hợp click thì gọi event
@@ -155,7 +155,7 @@ function BoardContent({
     setActiveDragItemType(event?.active?.data?.current?.columnId ? ACTIVE_DRAG_ITEM_TYPE.CARD : ACTIVE_DRAG_ITEM_TYPE.COLUMN)
     setActiveDragItemData(event?.active?.data?.current)
 
-    // Nếu lal2 kéo Card thì mới thực hiện hannh2 độn set giá trị oldColumn
+    // Nếu là kéo Card thì mới thực hiện hành động set giá trị oldColumn
     if (event?.active?.data?.current?.columnId) {
       setOldColumnWhenDraggingCard(findColumnByCardId(event?.active?.id))
     }
